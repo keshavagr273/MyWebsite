@@ -114,7 +114,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </TooltipProvider>
         <Analytics />
-        {/* <CustomCursor /> */}
       </body>
     </html>
   );

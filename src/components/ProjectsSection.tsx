@@ -1,10 +1,6 @@
 import React from 'react'
-import ProjectsRow from './ProjectsRow'
 import { projects } from '@/helpers/constants'
-import ButttonRow from './SectionHeading'
 import ProjectCard from './ProjectCard.tsx/ProjectCard'
-import ProjectsCard from './ProjectsCard'
-import { Button } from './ui/button'
 import RingButton from './RingButton'
 import Link from 'next/link'
 
