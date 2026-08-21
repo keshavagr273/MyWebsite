@@ -9,12 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: 'https://keshavagrawal.in/projectspage',
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    {
       url: 'https://keshavagrawal.in/projects',
       lastModified: new Date(),
       changeFrequency: 'weekly',

@@ -13,6 +13,7 @@ type RingButtonProps = {
   className?: string
   target?: string
   rel?: string
+  ariaLabel?: string
 }
 
 const ringButtonSizeStyles: Record<
@@ -44,13 +45,13 @@ const ringButtonSizeStyles: Record<
   },
 }
 
-const RingButton = ({ text, href, icon: Icon, size = "lg" ,className, target, rel }: RingButtonProps) => {
+const RingButton = ({ text, href, icon: Icon, size = "lg" ,className, target, rel, ariaLabel }: RingButtonProps) => {
   const sizeStyles = ringButtonSizeStyles[size]
 
   let iconNode = null;
   if (Icon) {
     if (typeof Icon === 'function') {
-      iconNode = <Icon className={sizeStyles.iconSize} />;
+      iconNode = <Icon className={sizeStyles.iconSize} aria-hidden="true" />;
     } else {
       iconNode = React.isValidElement(Icon)
         ? React.cloneElement(Icon as React.ReactElement<{ className?: string }>, {
@@ -77,10 +78,11 @@ const RingButton = ({ text, href, icon: Icon, size = "lg" ,className, target, re
         size={sizeStyles.buttonSize}
         className={cn(
           "relative flex items-center gap-2 rounded-md border border-[#39393D] transition-colors  ",
-          sizeStyles.buttonPadding
+          sizeStyles.buttonPadding,
+          className
         )}
       >
-        <Link href={href} target={target} rel={rel}>{content}</Link>
+        <Link href={href} target={target} rel={rel} aria-label={ariaLabel || text}>{content}</Link>
       </Button>
     )
   }
@@ -88,9 +90,11 @@ const RingButton = ({ text, href, icon: Icon, size = "lg" ,className, target, re
   return (
     <Button
       size={sizeStyles.buttonSize}
+      aria-label={ariaLabel || text}
       className={cn(
         "relative flex items-center gap-2 rounded-md border border-[#39393D] transition-colors hover:bg-[#1C1C1F]/50 scale-100 hover:scale-[0.99]",
-        sizeStyles.buttonPadding
+        sizeStyles.buttonPadding,
+        className
       )}
     >
       {content}

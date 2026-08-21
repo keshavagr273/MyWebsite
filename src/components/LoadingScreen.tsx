@@ -68,9 +68,9 @@ const WordPreloader = ({ onFinish }: { onFinish: () => void }) => {
         className={`fixed inset-0 bg-[#09090B] z-9999999999 flex items-center justify-center ${closing ? "shutter-panel" : ""}`}
         onAnimationEnd={handleAnimationEnd}
       >
-        <h1 className="text-white text-4xl md:text-6xl tracking-tight transition-opacity duration-300">
+        <p role="status" aria-live="polite" className="text-white text-4xl md:text-6xl tracking-tight transition-opacity duration-300 font-medium">
           • {words[currentWordIndex]}
-        </h1>
+        </p>
       </div>
     </>
   );

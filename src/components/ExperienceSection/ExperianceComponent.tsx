@@ -51,8 +51,18 @@ const Experience = ({
   return (
     <div className="px-4 md:px-[3%]">
       <div
+        role="button"
+        tabIndex={0}
+        aria-expanded={open}
+        aria-label={`Toggle details for ${role} at ${company}`}
         onClick={() => setOpen((prev) => !prev)}
-        className={`group border border-white/10 bg-transparent backdrop-blur-xl overflow-hidden transition-all duration-150 ${getRoundedClass(
+        onKeyDown={(e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            setOpen((prev) => !prev);
+          }
+        }}
+        className={`group border border-white/10 bg-transparent backdrop-blur-xl overflow-hidden transition-all duration-150 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 ${getRoundedClass(
           rounded
         )}`}
       >

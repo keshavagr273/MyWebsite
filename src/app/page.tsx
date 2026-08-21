@@ -20,32 +20,34 @@ const page = () => {
         <div className="w-full md:px-8">
           <div className="text-white bg-[#09090B]">
             <Navbar />
-            <section data-section-label="Hero section">
-              <HeroSection />
-            </section>
-            <section data-section-label="Projects section">
-              <SectionHeading title="Projects" />
-              <ProjectsSection />
-            </section>
-              <section data-section-label="Experience section">
-              <SectionHeading title="Experience" />
-              <ExperienceSection />
-            </section>
-            <section data-section-label="Skills section">
-              <SectionHeading title="Skills" />
-              <SkillSection />
-            </section>
-            <section data-section-label="Github section">
-              <SectionHeading title="Github Graph" />
-              <GithubActivityCard />
-            </section>
-            <section data-section-label="About section">
-              <SectionHeading title="About Me" />
-              <About />
-            </section>
-            <section data-section-label="Contact section">
-              <ContactSection />
-            </section>
+            <main id="main-content">
+              <section data-section-label="Hero section" aria-label="Hero">
+                <HeroSection />
+              </section>
+              <section data-section-label="Projects section" aria-label="Featured Projects">
+                <SectionHeading title="Projects" />
+                <ProjectsSection />
+              </section>
+              <section data-section-label="Experience section" aria-label="Work Experience">
+                <SectionHeading title="Experience" />
+                <ExperienceSection />
+              </section>
+              <section data-section-label="Skills section" aria-label="Technical Skills">
+                <SectionHeading title="Skills" />
+                <SkillSection />
+              </section>
+              <section data-section-label="Github section" aria-label="GitHub Activity">
+                <SectionHeading title="Github Graph" />
+                <GithubActivityCard />
+              </section>
+              <section data-section-label="About section" aria-label="About Me">
+                <SectionHeading title="About Me" />
+                <About />
+              </section>
+              <section data-section-label="Contact section" aria-label="Contact and Social Links">
+                <ContactSection />
+              </section>
+            </main>
           </div>
         </div>
       </Container>

@@ -2,16 +2,14 @@
 
 import Image from "next/image"
 import React, { useEffect } from "react"
-import StatusDot from "../BlinkingDot.tsx/BlinkingDot"
-import RingButton from "../RingButton"
+import StatusDot from "./BlinkingDot"
+import RingButton from "./RingButton"
 import { GitHubIcon } from "@/app/icons/Githubicon"
 import { CircleArrowRight } from "lucide-react"
-import { motion } from "motion/react"
-import { Button } from "../ui/button";
 
 type ProjectStatus = "live" | "building" | "discontinued"
 
-type ProjectCardProps = {
+export type ProjectCardProps = {
   image: string
   title: string
   description: string
@@ -36,11 +34,10 @@ const ProjectCard = ({
   githubLink,
   projectBg,
 }: ProjectCardProps) => {
-
   const color = statusColorMap[status]
   const [githubStar, setGithubStar] = React.useState<number>(0);
 
-   const fetchStars = async (repo: string): Promise<number> => {
+  const fetchStars = async (repo: string): Promise<number> => {
     try {
       const res = await fetch(`https://api.github.com/repos/${repo}`);
       if (!res.ok) return 0;
@@ -54,13 +51,12 @@ const ProjectCard = ({
 
   useEffect(() => {
     if (githubLink) {
-      fetchStars( githubLink.replace("https://github.com/", "") ).then(setGithubStar);
+      fetchStars(githubLink.replace("https://github.com/", "")).then(setGithubStar);
     }
-  },[githubLink])
+  }, [githubLink])
 
   return (
     <div className="h-full group bg-[#09090B] border border-neutral-800 ring-1 rounded-lg ring-neutral-900 hover:ring-neutral-800 transition duration-300 ring-offset-4 ring-offset-black flex flex-col">
-
       <div className="relative w-full h-48 sm:h-52 md:h-56 rounded-t-lg overflow-hidden bg-neutral-900">
         {githubStar > 0 && (
           <div className="absolute top-2.5 right-2.5 z-20">
@@ -101,6 +97,7 @@ const ProjectCard = ({
           {liveLink && (
             <RingButton
               text="View Live"
+              ariaLabel={`View live demo of ${title}`}
               icon={CircleArrowRight}
               href={liveLink}
               size="md"
@@ -112,6 +109,7 @@ const ProjectCard = ({
           {githubLink && (
             <RingButton
               text="Github"
+              ariaLabel={`View ${title} on GitHub`}
               icon={GitHubIcon}
               href={githubLink}
               size="sm"

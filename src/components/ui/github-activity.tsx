@@ -361,7 +361,7 @@ const ContributionGrid = ({
               style={{ width: cellSize }}
             >
               {month && (
-                <span className="absolute left-0 top-0 text-[10px] leading-none text-foreground/40">
+                <span className="absolute left-0 top-0 text-[10px] leading-none font-medium text-zinc-400 dark:text-zinc-400">
                   {month}
                 </span>
               )}

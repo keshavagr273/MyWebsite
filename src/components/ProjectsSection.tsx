@@ -1,8 +1,7 @@
 import React from 'react'
 import { projects } from '@/helpers/constants'
-import ProjectCard from './ProjectCard.tsx/ProjectCard'
+import ProjectCard from './ProjectCard'
 import RingButton from './RingButton'
-import Link from 'next/link'
 
 const ProjectsSection = () => {
   return (
@@ -22,9 +21,7 @@ const ProjectsSection = () => {
         ))}
       </div>
       <div className="px-[4%] flex justify-center pb-6">
-        <Link href="/projectspage">
-          <RingButton text="View All Projects" size="lg"/>
-        </Link>
+        <RingButton href="/projects" text="View All Projects" ariaLabel="View All Projects" size="lg"/>
       </div>
     </div>
   )

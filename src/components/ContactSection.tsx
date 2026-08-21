@@ -134,12 +134,29 @@ const ContactSection = () => {
       </div>
 
       {/* giant clipped wordmark bleeding off the bottom edge */}
-      <p
+      <div
         aria-hidden="true"
-        className="pointer-events-none mt-16 -mb-[0.22em] text-center font-space-grotesk text-[clamp(2.5rem,26vw,30rem)] leading-[0.7] font-bold tracking-tighter text-[#141418] select-none"
+        role="presentation"
+        className="pointer-events-none mt-16 -mb-[0.22em] flex justify-center overflow-hidden select-none"
+      >
+        <svg
+          viewBox="0 0 1000 230"
+          className="w-full h-auto max-h-[30rem] fill-[#141418] font-space-grotesk font-bold tracking-tighter"
+          aria-hidden="true"
+          role="presentation"
         >
-        KESHAV
-      </p>
+          <text
+            x="50%"
+            y="85%"
+            textAnchor="middle"
+            fontSize="250"
+            fontWeight="bold"
+            letterSpacing="-0.05em"
+          >
+            KESHAV
+          </text>
+        </svg>
+      </div>
     </section>
   );
 };
