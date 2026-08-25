@@ -33,6 +33,20 @@ const syne = Syne({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://keshavagrawal.in"),
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   title: "Keshav Agrawal - Full-Stack Developer & Software Engineer",
   description: "Full-Stack Web Developer with a Passion for Building Scalable, AI/ML-Powered Solutions.",
   icons: {

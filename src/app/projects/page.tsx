@@ -9,6 +9,9 @@ import React from "react";
 export const metadata = {
   title: "Projects | Keshav Agrawal",
   description: "All my Proof of Work at one place — Full-Stack web apps, distributed systems, and AI solutions.",
+  alternates: {
+    canonical: "/projects",
+  },
 };
 
 const ProjectsPage = () => {
