@@ -62,6 +62,10 @@ function useFittedCell() {
 
 const REPOS = [
   {
+    name: "GitLens-AI",
+    href: "https://github.com/keshavagr273/GitLens-AI",
+  },
+  {
     name: "ClassMate",
     href: "https://github.com/keshavagr273/ClassMate",
   },

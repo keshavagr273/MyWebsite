@@ -45,6 +45,17 @@ export const projects: Project[] = [
   },
   {
     id: 3,
+    name: "GitLens AI",
+    description:
+      "A production-grade AI-powered codebase intelligence and architecture reasoning platform featuring deterministic AST parsing with Tree-sitter, interactive React Flow dependency graphs, and AST-aware hybrid code RAG.",
+    image: "/Project/ProjectImages/gitlab.png",
+    link: "https://git-lens-ai-web.vercel.app/",
+    github: "https://github.com/keshavagr273/GitLens-AI",
+    status: "live",
+    projectBg: "/Project/ProjectImages/gitlab.png",
+  },
+  {
+    id: 4,
     name: "ChatSphere",
     description:
       "A full-stack real-time communication platform supporting 1-on-1 and group chats, WebRTC audio/video calling, Socket.IO messaging, typing indicators, and emoji reactions.",
@@ -55,7 +66,7 @@ export const projects: Project[] = [
     projectBg: "/Project/ProjectImages/chat.png",
   },
   {
-    id: 4,
+    id: 5,
     name: "Equity Nest",
     description:
       "A real-time Indian stock market analytical and visual trading SaaS with live Upstox binary WebSocket feeds, TradingView charts, and in-memory NSE symbol fuzzy search.",
@@ -66,7 +77,7 @@ export const projects: Project[] = [
     projectBg: "/Project/ProjectImages/equity.png",
   },
   {
-    id: 5,
+    id: 6,
     name: "Luminary AI",
     description:
       "An AI-powered academic planning platform for university discovery, admissions guidance, ROI calculators, and personalized recommendations.",
@@ -77,7 +88,7 @@ export const projects: Project[] = [
     projectBg: "/Project/ProjectImages/Luminary.png",
   },
   {
-    id: 6,
+    id: 7,
     name: "FreshFinds",
     description:
       "A community-driven marketplace connecting local vendors with nearby customers to resell fresh surplus food at discounted prices and reduce food waste.",
@@ -88,7 +99,7 @@ export const projects: Project[] = [
     projectBg: "/Project/ProjectImages/FreshFinds.png",
   },
   {
-    id: 7,
+    id: 8,
     name: "Agricare",
     description:
       "Comprehensive full-stack agricultural platform empowering farmers through digitalized inventory management, dynamic marketplace, and multi-language support (i18n).",
@@ -99,7 +110,7 @@ export const projects: Project[] = [
     projectBg: "/Project/ProjectImages/Agricare.png",
   },
   {
-    id: 8,
+    id: 9,
     name: "Heart Disease Predictor",
     description:
       "Machine learning web app predicting cardiovascular disease risk using user health parameters and a deep neural network model trained on BRFSS dataset.",
@@ -110,7 +121,7 @@ export const projects: Project[] = [
     projectBg: "/Project/ProjectImages/heart1.png",
   },
   {
-    id: 9,
+    id: 10,
     name: "Faculty Project Tracker",
     description:
       "Admin dashboard for academic project group tracking, milestone reviews, inactive group alerts, and CSV exports with JWT security.",
