@@ -45,17 +45,6 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    name: "GitLens AI",
-    description:
-      "A production-grade AI-powered codebase intelligence and architecture reasoning platform featuring deterministic AST parsing with Tree-sitter, interactive React Flow dependency graphs, and AST-aware hybrid code RAG.",
-    image: "/Project/ProjectImages/gitlab.png",
-    link: "https://git-lens-ai-web.vercel.app/",
-    github: "https://github.com/keshavagr273/GitLens-AI",
-    status: "live",
-    projectBg: "/Project/ProjectImages/gitlab.png",
-  },
-  {
-    id: 4,
     name: "ChatSphere",
     description:
       "A full-stack real-time communication platform supporting 1-on-1 and group chats, WebRTC audio/video calling, Socket.IO messaging, typing indicators, and emoji reactions.",
@@ -66,7 +55,7 @@ export const projects: Project[] = [
     projectBg: "/Project/ProjectImages/chat.png",
   },
   {
-    id: 5,
+    id: 4,
     name: "Equity Nest",
     description:
       "A real-time Indian stock market analytical and visual trading SaaS with live Upstox binary WebSocket feeds, TradingView charts, and in-memory NSE symbol fuzzy search.",
@@ -75,6 +64,17 @@ export const projects: Project[] = [
     github: "https://github.com/keshavagr273/Equity-Nest.git",
     status: "live",
     projectBg: "/Project/ProjectImages/equity.png",
+  },
+  {
+    id: 5,
+    name: "GitLens AI",
+    description:
+      "A production-grade AI-powered codebase intelligence and architecture reasoning platform featuring deterministic AST parsing with Tree-sitter, interactive React Flow dependency graphs, and AST-aware hybrid code RAG.",
+    image: "/Project/ProjectImages/gitlab.png",
+    link: "https://git-lens-ai-web.vercel.app/",
+    github: "https://github.com/keshavagr273/GitLens-AI",
+    status: "live",
+    projectBg: "/Project/ProjectImages/gitlab.png",
   },
   {
     id: 6,
