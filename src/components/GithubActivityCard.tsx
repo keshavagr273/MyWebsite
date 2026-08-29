@@ -64,22 +64,62 @@ const REPOS = [
   {
     name: "GitLens-AI",
     href: "https://github.com/keshavagr273/GitLens-AI",
+    logo: (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src="/project-logos/gitlens.png"
+        alt="GitLens-AI"
+        className="size-full object-cover rounded-full"
+      />
+    ),
   },
   {
     name: "ClassMate",
     href: "https://github.com/keshavagr273/ClassMate",
+    logo: (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src="/project-logos/classmate.png"
+        alt="ClassMate"
+        className="size-full object-contain p-0.5 rounded-full"
+      />
+    ),
   },
   {
     name: "HydraCache",
     href: "https://github.com/keshavagr273/HydraCache",
+    logo: (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src="/project-logos/hydracache.png"
+        alt="HydraCache"
+        className="size-full object-contain rounded-full"
+      />
+    ),
   },
   {
     name: "DocSaarthi",
     href: "https://github.com/keshavagr273/DocSaarthi",
+    logo: (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src="/project-logos/docsaarthi_transparent.png"
+        alt="DocSaarthi"
+        className="size-full object-contain p-0.5 rounded-full"
+      />
+    ),
   },
   {
     name: "ChatSphere",
     href: "https://github.com/keshavagr273/Chat-App",
+    logo: (
+      // eslint-disable-next-line @next/next/no-img-element
+      <img
+        src="/project-logos/chatsphere.png"
+        alt="ChatSphere"
+        className="size-full object-contain p-0.5 rounded-full"
+      />
+    ),
   },
 ]
 
@@ -96,7 +136,7 @@ export default function GithubActivityCard() {
           cellSize={cellSize}
           showMonths
           style={DARK_TOKENS}
-          className="bg-[#0e0e10] [&_button>svg]:text-[#3e4346] [&_img]:p-1.5"
+          className="bg-[#0e0e10] [&_button>svg]:text-[#3e4346]"
         />
       </div>
     </div>
